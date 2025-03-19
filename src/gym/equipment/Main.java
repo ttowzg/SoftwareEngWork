@@ -77,28 +77,30 @@ public class Main {
 
     static void registrarAlocacao() {
         if (clientes.isEmpty() || aparelhos.isEmpty()) {
-            System.out.println("É necessário ter clientes e aparelhos cadastrados.");
+            System.out.println("Erro: Não há clientes ou aparelhos cadastrados.");
             return;
         }
 
-        System.out.println("Selecione o cliente:");
-        for (Cliente c : clientes) {
-            System.out.println(c);
-        }
+        System.out.print("ID do Cliente: ");
         int idCliente = input.nextInt();
         input.nextLine();
+        if (idCliente <= 0 || idCliente > clientes.size()) {
+            System.out.println("Erro: Cliente não encontrado.");
+            return;
+        }
         Cliente cliente = clientes.get(idCliente - 1);
 
-        System.out.println("Selecione o aparelho:");
-        for (Aparelho a : aparelhos) {
-            System.out.println(a);
-        }
+        System.out.print("ID do Aparelho: ");
         int idAparelho = input.nextInt();
         input.nextLine();
+        if (idAparelho <= 0 || idAparelho > aparelhos.size()) {
+            System.out.println("Erro: Aparelho não encontrado.");
+            return;
+        }
         Aparelho aparelho = aparelhos.get(idAparelho - 1);
 
         if (aparelho.quantidade == 0) {
-            System.out.println("Aparelho indisponível.");
+            System.out.println("Erro: Aparelho indisponível.");
             return;
         }
 
@@ -128,9 +130,12 @@ public class Main {
     }
 
     static void listarAlocacoes() {
+        if (alocacoes.isEmpty()) {
+            System.out.println("Erro: Nenhuma alocação registrada.");
+            return;
+        }
         for (Alocacao alocacao : alocacoes) {
             System.out.println(alocacao);
         }
     }
 }
-
