@@ -1,5 +1,4 @@
-Sistema básico para gestão de aluguel de aparelhos de musculação.  
-Apenas para fins acadêmicos, esse sistema faz parte do trabalho prático da disciplina de engenharia de Software 1, lecionada pelo Dr. Igor Muzetti Pereira no Icea - UFOP.  
-Para rodá-lo, basta clonar o repositório em um projeto dentro de uma IDE compatível com Java.
-
+A basic system for managing the rental of fitness equipment. 
+This system is intended for academic purposes only and is part of the practical work for the Software Engineering 1 course taught by Dr. Igor Muzetti Pereira at ICEA - UFOP. 
+To run it, simply clone the repository into a project within a Java-compatible IDE.
 
